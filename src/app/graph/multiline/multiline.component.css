@@ -1,4 +1,20 @@
-.nvtooltip {
+.d3-chart {
+    width: 100%;
+    height: 350px;
+}
+
+path {
+    stroke: steelblue;
+    stroke-width: 2;
+    fill: none;
+}
+
+.dots {
+    cursor: pointer;
+    fill: red;
+}
+
+.tooltip {
     position: absolute;
     background-color: rgba(255,255,255,1);
     padding: 10px;
@@ -26,120 +42,20 @@
   .nvtooltip h3 {
     margin: 0;
     padding: 0;
+
     text-align: center;
-  }
-  
-  .nvtooltip p {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-  }
-  
-  .nvtooltip span {
-    display: inline-block;
-    margin: 2px 0;
-  }
-  
-  
-  
-  
-  
-  /**********
-  *  General SVG CSS
-  */
-  
-  
-  text {
+    width: auto;
+    height: auto;
+    padding: 6px 10px;
+    line-height: 22px;
     font: 12px sans-serif;
-  }
-  
-  
-  
-  /**********
-  *  Legend
-  */
-  
-  .legend .series {
-    cursor: pointer;
-  }
-  
-  .legend circle {
-    stroke-width: 2px;
-  }
-  
-  .legend .disabled circle {
-    fill-opacity: 0;
-  }
-  
-  
-  
-  /**********
-  *  Axes
-  */
-  
-  .axis path {
-    fill: none;
-    stroke: #000;
-    stroke-opacity: .75;
-    shape-rendering: crispEdges;
-  }
-  
-  .axis path.domain {
-    stroke-opacity: .75;
-  }
-  
-  .axis line {
-    fill: none;
-    stroke: #000;
-    stroke-opacity: .25;
-    shape-rendering: crispEdges;
-  }
-  
-  .axis line.zero {
-    stroke-opacity: .75;
-  }
-  
-  
-  
-  /**********
-  *  Line chart
-  */
-  
-  .point-paths path {
-    /*
-    fill: #eee;
-    stroke: #aaa;
-    */
-    stroke-opacity: 0;
-    fill-opacity: 0;
-  }
-  
-  
-  .lines path {
-    fill: none;
-    stroke-width: 1.5px;
-    stroke-linecap: round;
-  
-    transition: stroke-width 250ms linear;
-    -moz-transition: stroke-width 250ms linear;
-    -webkit-transition: stroke-width 250ms linear;
-  
-    transition-delay: 250ms;
-    -moz-transition-delay: 250ms;
-    -webkit-transition-delay: 250ms;
-  }
-  
-  .line.hover path {
-    stroke-width: 6px;
-  }
-  
-  .lines .point {
-    transition: stroke-width 250ms linear;
-    -moz-transition: stroke-width 250ms linear;
-    -webkit-transition: stroke-width 250ms linear;
-  }
-  
-  .lines .point.hover {
-    stroke-width: 20px;
-    stroke-opacity: .5;
-  }
+    background: #fefefe;
+    color: steelblue;
+    border: 1px solid green;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+tooltipLine {
+    stroke: greenyellow;
+}

@@ -1,0 +1,18 @@
+<form [formGroup]="flowForm" (ngSubmit)="onSubmit()" novalidate>
+  <div formArrayName="secretLairs" class="well well-lg">
+    <div *ngFor="let address of secretLairs.controls; let i=index" [formGroupName]="i">
+      <!-- The repeated address template -->
+      <div style="margin-left: 1em;">
+        <div class="form-group">
+          <input class="form-control" placeholder="{{status}} {{i + 1}}" formControlName="street">
+        </div>
+      </div>
+      <button (click)="deleteRow(index)" type="button">Delete Secret Lair</button>
+      <br>
+      <hr/>
+      <!-- End of the repeated address template -->
+    </div>
+    <button (click)="addLair()" type="button">Add a Secret Lair</button>
+
+  </div>
+</form>
